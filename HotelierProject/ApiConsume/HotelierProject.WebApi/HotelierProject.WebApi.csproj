@@ -20,4 +20,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HotelierProject.Business\HotelierProject.Business.csproj" />
+    <ProjectReference Include="..\HotelierProject.Dto\HotelierProject.Dto.csproj" />
+  </ItemGroup>
+
 </Project>
