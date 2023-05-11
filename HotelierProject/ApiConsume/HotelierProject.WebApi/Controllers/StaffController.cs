@@ -31,21 +31,25 @@ namespace HotelierProject.WebApi.Controllers
         }
 
         [HttpDelete]
-        public IActionResult DeleteStaff()
+        public IActionResult DeleteStaff(int id)
         {
+            var values = _staffService.GetById(id);
+            _staffService.Delete(values);
             return Ok();
         }
 
         [HttpPut]
-        public IActionResult UpdateStaff()
+        public IActionResult UpdateStaff(Staff staff)
         {
+            _staffService.Update(staff);
             return Ok();
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetStaff()
+        public IActionResult GetStaff(int id)
         {
-            return Ok();
+            var values = _staffService.GetById(id);
+            return Ok(values);
         }
     }
 }
