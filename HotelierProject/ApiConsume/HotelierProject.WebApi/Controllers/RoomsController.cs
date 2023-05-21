@@ -38,11 +38,9 @@ namespace HotelierProject.WebApi.Controllers
             else
             {
                 var values = _mapper.Map<Room>(addRoomDto);
-                //var result = _roomService.Add(values);
+                _roomService.Add(values);
+                return Ok();
             }
-
-            //_roomService.Add(result);
-            return Ok();
         }
 
         [HttpDelete]
