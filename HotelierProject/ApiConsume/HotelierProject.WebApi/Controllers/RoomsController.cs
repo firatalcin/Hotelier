@@ -52,10 +52,20 @@ namespace HotelierProject.WebApi.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateRoom(Room room)
+        public IActionResult UpdateRoom(UpdateRoomDto updateRoomDto)
         {
-            _roomService.Update(room);
-            return Ok();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                var values = _mapper.Map<Room>(updateRoomDto);
+                _roomService.Update(values);
+                return Ok();
+            }
+
+
         }
 
         [HttpGet("{id}")]
