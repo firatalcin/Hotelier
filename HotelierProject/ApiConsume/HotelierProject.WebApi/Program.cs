@@ -1,3 +1,4 @@
+using AutoMapper;
 using HotelierProject.Business.Abstract;
 using HotelierProject.Business.Concrete;
 using HotelierProject.DataAccess.Abstract;
@@ -38,6 +39,8 @@ builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 
 builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 builder.Services.AddScoped<ISubscribeDal, EfSubscribeDal>();
+
+builder.Services.AddSingleton<IMapper,Mapper>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
