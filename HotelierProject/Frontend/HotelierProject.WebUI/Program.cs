@@ -5,7 +5,7 @@ builder.Services.AddHttpClient();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
