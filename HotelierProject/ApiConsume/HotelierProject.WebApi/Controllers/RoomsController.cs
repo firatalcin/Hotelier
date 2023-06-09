@@ -12,7 +12,7 @@ namespace HotelierProject.WebApi.Controllers
     [ApiController]
     public class RoomsController : ControllerBase
     {
-        private readonly IRoomService _roomService;
+        private readonly IRoomService _roomService; 
         private readonly IMapper _mapper; 
 
         public RoomsController(IRoomService roomService, IMapper mapper)
