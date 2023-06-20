@@ -7,9 +7,9 @@ namespace HotelierProject.WebUI.Dtos.RegisterDto
         [Required(ErrorMessage = "Ad Alanı Gereklidir")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Soyad Alanı Gereklidir")]
-        public string Soyad { get; set; }
-        [Required(ErrorMessage = "Kullanıcı Adı Alanı Gereklidir")]
         public string Surname { get; set; }
+        [Required(ErrorMessage = "Kullanıcı Adı Alanı Gereklidir")]
+        public string UserName { get; set; }
         [Required(ErrorMessage = "Mail Alanı Gereklidir")]
         public string Mail { get; set; }
         [Required(ErrorMessage = "Şifre Alanı Gereklidir")]

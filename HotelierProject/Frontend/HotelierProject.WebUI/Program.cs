@@ -1,6 +1,10 @@
+using HotelierProject.DataAccess.Concrete.Contexts;
+using HotelierProject.Entities.Concrete;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddDbContext<ProjectContext>();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<ProjectContext>();
 builder.Services.AddHttpClient();
 // Add services to the container.
 builder.Services.AddControllersWithViews();

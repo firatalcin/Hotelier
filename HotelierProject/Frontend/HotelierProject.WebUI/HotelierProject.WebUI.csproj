@@ -21,10 +21,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.14" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ApiConsume\HotelierProject.DataAccess\HotelierProject.DataAccess.csproj" />
     <ProjectReference Include="..\..\ApiConsume\HotelierProject.Entities\HotelierProject.Entities.csproj" />
   </ItemGroup>
 
